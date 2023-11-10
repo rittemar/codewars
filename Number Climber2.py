@@ -5,6 +5,7 @@ def climb(n):
     if n == 1:
         return [1]
     start_num = n
+    final_number = n
     final_lst = []
     while start_num > 1:
         if start_num % 2 != 0:
@@ -15,6 +16,8 @@ def climb(n):
             temp1 = start_num / 2
             start_num = int(temp1)
             final_lst.append(start_num)
+    final_lst.reverse()
+    final_lst.append(final_number)
     return final_lst
 
 climb(100)
